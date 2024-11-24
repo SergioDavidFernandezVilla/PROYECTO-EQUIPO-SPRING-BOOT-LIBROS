@@ -46,4 +46,11 @@ public class LibroController {
         libroService.deleteBook(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/actulizar-book/{id}")
+    public ResponseEntity<LibroModel> actualizarLibro(@PathVariable Long id, @RequestBody LibroModel libro) {
+        libro.setId(id);
+        LibroModel libroActualizado = libroService.updateBook(libro);
+        return ResponseEntity.ok(libroActualizado);
+    }
 }

@@ -35,4 +35,9 @@ public class LibroService {
     public void deleteBook(Long id) {
         repository.deleteById(id);
     }
+
+    // Actulizar libro por id
+    public LibroModel updateBook(LibroModel libro) {
+        return repository.save(libro);
+    }
 }
