@@ -13,7 +13,7 @@ import com.example.demo.models.LibroModel;
 import com.example.demo.services.LibroService;
 
 @RestController
-@RequestMapping("/libros")
+@RequestMapping("/libro")
 public class LibroController {
 
     private final LibroService libroService;
