@@ -30,4 +30,9 @@ public class LibroService {
     public Iterable<LibroModel> getAllBooks() {
         return repository.findAll();
     }
+
+    // Eliminar libro por id
+    public void deleteBook(Long id) {
+        repository.deleteById(id);
+    }
 }
